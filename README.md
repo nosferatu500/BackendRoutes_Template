@@ -1,6 +1,6 @@
-###*Simple template for generate API Solidity Smart-Contract*
+*Simple template for generate API Solidity Smart-Contract*
 
-####**Features:**
+**Features:**
 
 - gRPC
 - HTTP/HTTPS
@@ -9,7 +9,7 @@
 
 <br>
     
-####Build
+**Build**
 
 1) Install Go 1.9.2 `golang.org`
 2) Install Dep `github.com/golang/dep`
