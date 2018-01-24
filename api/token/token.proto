@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package token;
+
+import "google/api/annotations.proto";
+
+service Token {
+    //Get name of token.
+    //
+    //Get name of token using gerated key.
+    rpc GetName(DummyReq) returns (GetNameResp) {
+        option (google.api.http) = {
+            get: "/v1/token/name"
+      };
+    }
+
+    //Get symbol of token.
+    //
+    //Get symbol of token using jwt token.
+    rpc GetSymbol(DummyReq) returns (GetSymbolResp) {
+        option (google.api.http) = {
+            get: "/v1/token/symbol"
+      };
+    }
+
+}
+
+message DummyReq {}
+
+message GetNameResp {
+    string result = 1;
+}
+
+message GetSymbolResp {
+    string result = 1;
+}

@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package auth;
+
+import "google/api/annotations.proto";
+
+service Auth {
+    // Login using private key.
+    //
+    // Login using private key.
+    rpc LoginKey(LoginKeyReq) returns (LoginResp) {
+        option (google.api.http) = {
+            post: "/v1/auth/loginKey"
+            body: "*"
+      };
+    }
+}
+
+message LoginKeyReq {
+    string key = 1;
+}
+
+message LoginResp {
+    string token = 1;
+}
