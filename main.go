@@ -11,11 +11,15 @@
 package main
 
 import (
+	"BackendRoutes_Template/controller/helper"
+	"BackendRoutes_Template/gocontracts"
 	"BackendRoutes_Template/model"
 	"BackendRoutes_Template/service"
 	"flag"
 	"github.com/ethereum/go-ethereum/ethclient"
 	"github.com/golang/glog"
+	"os"
+	"fmt"
 )
 
 func main() {
@@ -24,11 +28,20 @@ func main() {
 
 	s := &service.Server{}
 
-	rpc_cli, _ := ethclient.Dial("https://rinkeby.infura.io/dUQe3kE7aGgdnkBmEAny")
-
-	s.Connect = rpc_cli
-
-	model.ContractAddress = "0xef40f21f9c84fd5c83070875a76a2b86c35ae7ea"
+	for _, arg := range os.Args {
+		if arg == "simulator" {
+			s.StartSimulatedConnection()
+			auth, _ := helper.CreateAuth(s.Auth)
+			address, _, _, _ := token.DeployPowerToken(auth, s.Connect)
+			model.ContractAddress = address.String()
+			fmt.Println("Simulator mode: on")
+			break
+		} else {
+			fmt.Println("Simulator mode: off")
+			s.Connect, _ = ethclient.Dial("https://rinkeby.infura.io/dUQe3kE7aGgdnkBmEAny")
+			model.ContractAddress = "0xef40f21f9c84fd5c83070875a76a2b86c35ae7ea"
+		}
+	}
 
 	go s.StartGRPCServer(9092)
 

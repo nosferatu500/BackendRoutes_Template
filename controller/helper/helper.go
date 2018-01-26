@@ -6,10 +6,21 @@ import (
 	"github.com/ethereum/go-ethereum/accounts/abi/bind"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
+	"strings"
 )
 
 func GenerateAuth() (*bind.TransactOpts, error) {
 	key, err := crypto.GenerateKey()
+	if err != nil {
+		return nil, err
+	}
+	return bind.NewKeyedTransactor(key), err
+}
+
+func CreateAuth(token string) (*bind.TransactOpts, error) {
+	privateKey := strings.TrimPrefix(token, "0x")
+
+	key, err := crypto.HexToECDSA(privateKey)
 	if err != nil {
 		return nil, err
 	}
