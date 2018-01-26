@@ -5,7 +5,7 @@
 - gRPC
 - HTTP/HTTPS
 - Auto-generate doc for API
-- Auth with Bearer (Temporary Access Token)
+- Without auth (for current branch)
 
 <br>
     

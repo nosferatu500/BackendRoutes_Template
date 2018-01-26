@@ -14,12 +14,6 @@
   revision = "2e60448ffcc6bf78332d1fe590260095f554dd78"
 
 [[projects]]
-  name = "github.com/dgrijalva/jwt-go"
-  packages = ["."]
-  revision = "dbeaa9332f19a944acb5736b4456cfcc02140e29"
-  version = "v3.1.0"
-
-[[projects]]
   name = "github.com/ethereum/go-ethereum"
   packages = [
     ".",
