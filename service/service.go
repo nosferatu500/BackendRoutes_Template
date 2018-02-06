@@ -1,9 +1,9 @@
 package service
 
 import (
-	auth_gw "BackendRoutes_Template/api/auth"
-	token_gw "BackendRoutes_Template/api/token"
-	"BackendRoutes_Template/controller/action"
+	auth_gw "github.com/nosferatu500/BackendRoutes_Template/api/auth"
+	token_gw "github.com/nosferatu500/BackendRoutes_Template/api/token"
+	"github.com/nosferatu500/BackendRoutes_Template/controller/action"
 	"github.com/ethereum/go-ethereum/accounts/abi/bind"
 	"github.com/gorilla/handlers"
 	"github.com/grpc-ecosystem/go-grpc-middleware/auth"

@@ -1,10 +1,10 @@
 package action
 
 import (
-	auth_gw "BackendRoutes_Template/api/auth"
-	token_gw "BackendRoutes_Template/api/token"
-	"BackendRoutes_Template/controller/helper"
-	jwt_manager "BackendRoutes_Template/jwt"
+	auth_gw "github.com/nosferatu500/BackendRoutes_Template/api/auth"
+	token_gw "github.com/nosferatu500/BackendRoutes_Template/api/token"
+	"github.com/nosferatu500/BackendRoutes_Template/controller/helper"
+	jwt_manager "github.com/nosferatu500/BackendRoutes_Template/jwt"
 	"github.com/ethereum/go-ethereum/accounts/abi/bind"
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/pkg/errors"

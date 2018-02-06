@@ -1,9 +1,9 @@
 package helper
 
 import (
-	"BackendRoutes_Template/gocontracts"
-	"BackendRoutes_Template/jwt"
-	"BackendRoutes_Template/model"
+	"github.com/nosferatu500/BackendRoutes_Template/gocontracts"
+	"github.com/nosferatu500/BackendRoutes_Template/jwt"
+	"github.com/nosferatu500/BackendRoutes_Template/model"
 	"github.com/ethereum/go-ethereum/accounts/abi/bind"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"

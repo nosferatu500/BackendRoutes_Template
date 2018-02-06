@@ -1,7 +1,7 @@
 package jwt
 
 import (
-	"BackendRoutes_Template/model"
+	"github.com/nosferatu500/BackendRoutes_Template/model"
 	"github.com/dgrijalva/jwt-go"
 	"time"
 )

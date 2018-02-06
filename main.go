@@ -11,8 +11,8 @@
 package main
 
 import (
-	"BackendRoutes_Template/model"
-	"BackendRoutes_Template/service"
+	"github.com/nosferatu500/BackendRoutes_Template/model"
+	"github.com/nosferatu500/BackendRoutes_Template/service"
 	"flag"
 	"github.com/ethereum/go-ethereum/ethclient"
 	"github.com/golang/glog"
